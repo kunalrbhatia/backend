@@ -4,6 +4,7 @@ var usersSchema = new mongoose.Schema({
   fname: { type: String },
   lname: { type: String },
   email: { type: String },
+  token: { type: String },
 });
 
 module.exports = mongoose.model("Users", usersSchema);
