@@ -9,7 +9,6 @@ router.post("/", async (req, res) => {
     if (user.password === req.body.password) {
       const token = jwt.sign({ _id: user._id }, "kunalbhatia");
       res.header("auth-token", token).json(token);
-      res.send("Email or password are correct");
     } else {
       res.status(400).send("Email or password are incorrect");
     }
